@@ -73,8 +73,8 @@ const addNewIncome = (e) => {
 
     node.innerHTML = `
       <input type="text" id="newTitle-${id}" value="${title}"> - <input type="text" id="newAmount-${id}" value="${amount}">
-      <button onclick="editOkIncome(${id})">ok</button>
-      <button onclick="editCancelIncome(${id}, '${title}', '${amount}')">cancel</button>
+      <button onclick="editOkIncome(${id})">Ok</button>
+      <button onclick="editCancelIncome(${id}, '${title}', '${amount}')">Cofnij</button>
     `
     incSum -= Number(amount);
     let result = incSum - expSum;
@@ -131,8 +131,8 @@ const addNewIncome = (e) => {
 
     node.innerHTML = `
       <input type="text" id="newTitle-${id}" value="${title}"> - <input type="text" id="newAmount-${id}" value="${amount}">
-      <button onclick="editOkExpense(${id})">ok</button>
-      <button onclick="editCancelExpense(${id}, '${title}', '${amount}')">cancel</button>
+      <button onclick="editOkExpense(${id})">Ok</button>
+      <button onclick="editCancelExpense(${id}, '${title}', '${amount}')">Cofnij</button>
     `
     expSum -= Number(amount);
     let result = incSum - expSum;
@@ -145,19 +145,19 @@ const addNewIncome = (e) => {
   }
 
 
-  var editOkExpense = (nodeId) => {
-    let newTitle = document.querySelector(`#newTitle-${nodeId}`)
-    let newAmount = document.querySelector(`#newAmount-${nodeId}`)
-    let node = document.querySelector(`#expensesUl li[data-id="${nodeId}"]`);
+  var editOkExpense = (nodeIdE) => {
+    let newTitleE = document.querySelector(`#newTitle-${nodeIdE}`)
+    let newAmountE = document.querySelector(`#newAmount-${nodeIdE}`)
+    let nodeE = document.querySelector(`#expensesUl li[data-id="${nodeIdE}"]`);
 
-    node.innerHTML = `
-      ${newTitle.value} - ${newAmount.value}
-      <button onclick="updateExpense(${nodeId})">Edytuj</button>
-      <button onclick="deleteExpense(${nodeId})">Usuń</button>
+    nodeE.innerHTML = `
+      ${newTitleE.value} - ${newAmountE.value}
+      <button onclick="updateExpense(${nodeIdE})">Edytuj</button>
+      <button onclick="deleteExpense(${nodeIdE})">Usuń</button>
     `
-    node.dataset.title = newTitle.value;
-    node.dataset.amount = newAmount.value;
-    expSum += Number(newAmount.value);
+    nodeE.dataset.title = newTitleE.value;
+    nodeE.dataset.amount = newAmountE.value;
+    expSum += Number(newAmountE.value);
     let result = incSum - expSum;
     expenseSumDOM.innerHTML = expSum + "zł";
     if(result > 0) {

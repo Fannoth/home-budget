@@ -5,11 +5,13 @@ body {
     height: 100vh;
     font-family: 'KoHo', sans-serif;
     font-size: 18px;
+    background-color: #10131a;
+    color: white;
 }
 .mainS {
     width: 60vw;
     height: 80vh;
-    border: solid 1px black;
+    border: solid 1px white;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -20,28 +22,28 @@ body {
     flex-direction: row;
     height: 20%;
     width: 100%;
-    border: solid 1px black;
+    border: solid 1px whtie;
 }
 .dataOutput {
     display: flex;
     flex-direction: row;
     height: 80%;
     width: 100%;
-    border: solid 1px black;
+    border: solid 1px white;
 }
 .income {
     display: flex;
     flex-direction: column;
     width: 50%;
     height: 100%;
-    border: solid 1px black;
+    border: solid 1px white;
 }
 .expenses {
     display: flex;
     flex-direction: column;
     width: 50%;
     height: 100%;
-    border: solid 1px black;
+    border: solid 1px white;
 }
 .header {
     margin-left: 25px;
@@ -63,9 +65,10 @@ h1 {
 }
 input {
     border: none;
-    border-bottom: solid 1px black;
+    border-bottom: solid 1px white;
     margin-right: 25px;
-    background-color: #fff;
+    background-color: #10131a;
+    color: white;
 }
 
 .incomesData {
@@ -73,14 +76,14 @@ input {
     flex-direction: column;
     width: 50%;
     height: 100%;
-    border: solid 1px black;
+    border: solid 1px white;
 }
 .expensesData {
     display: flex;
     flex-direction: column;
     width: 50%;
     height: 100%;
-    border: solid 1px black;
+    border: solid 1px white;
 }
 .resultBox {
     display: flex;
@@ -91,7 +94,7 @@ input {
     left: 42%;
     height: 5vh;
     width: 17vw;
-    border: solid 1px black;
+
 }
 #resultAll {
     padding-left: 20px;
@@ -112,8 +115,9 @@ li {
 }
 button {
     border: none;
-    border-bottom: solid 1px black;
-    background-color: #fff;
+    border-bottom: solid 1px white;
+    background-color: #10131a;
+    color: white;
     font-size: 16px;
 }
 ul {
