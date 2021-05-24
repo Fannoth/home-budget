@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Jakub Czucha">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=KoHo:wght@200&display=swap" rel="stylesheet">
+
+    <title>Home Budget</title>
+</head>
+<body>
+    <main>
+        <div class="resultBox">
+            <div class="logo">
+                <img src="zdj1.jpg" alt="logo" class="logoPng">
+            </div>
+            <div class="result">
+                <p id="resultAll">Witaj! Tu pojawi się wynik!</p>
+            </div>
+        </div>
+        <section id="mainSection" class="mainS">
+            <div class="dataInput">
+                <div id="income" class="income">
+                    <div class="header">
+                        <h1>Przychody</h1>
+                    </div>
+                    <form id="incomeForm" class="form" autocomplete="off">
+                        <input type="text" placeholder="Nazwa przychodu" id="incomeText" class="incomeText">
+                        <input type="number" placeholder="Kwota przychodu" id="incomeNumber" class="incomeNumber">
+                        <input type="submit" value="Dodaj">
+                    </form>
+                </div>
+                <div id="expenses" class="expenses">
+                    <div class="header">
+                        <h1>Wydatki</h1>
+                    </div>
+                    <form id="expenseForm" class="form" autocomplete="off">
+                        <input type="text" placeholder="Nazwa wydatku" id="expenseText" class="expensesText">
+                        <input type="number" placeholder="Kwota wydatku" id="expenseNumber" class="expensesNumber">
+                        <input type="submit" value="Dodaj">
+                    </form>
+                </div>
+            </div>
+            <div class="dataOutput">
+                <div class="incomesData">
+                    <ul id="incomesUl" class="incomesUl">
+                    </ul>
+                    <div class="headerTumb"><h2>Suma przychodów: </h2><p id="incomeSum">0zł</p></div>
+                </div>
+                <div class="expensesData">
+                    <ul id="expensesUl" class="expensesUl">
+                    </ul>
+                    <div class="headerTumb"><h2>Suma wydatków: </h2><p id="expenseSum">0zł</p></div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="main.js" async></script>
+</body>
+</html>
