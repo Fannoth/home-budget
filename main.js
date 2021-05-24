@@ -115,7 +115,7 @@ const addNewIncome = (e) => {
       <button onclick="deleteIncome(${nodeId})">Usuń</button>
     `;
 
-    incSum += Number(incomeNumberDOM.value);
+    incSum += Number(nodeAmount);
     let result = incSum - expSum;
     incomeSumDOM.innerHTML = incSum + "zł";
     if(result > 0) {
@@ -167,13 +167,13 @@ const addNewIncome = (e) => {
     }
   }
 
-  var editCancelExpense = (nodeId, nodeTitle, nodeAmount) => {
-    document.querySelector(`#expensesUl li[data-id="${nodeId}"]`).innerHTML = `
-      ${nodeTitle} - ${nodeAmount}
-      <button onclick="updateExpense(${nodeId})">Edytuj</button>
-      <button onclick="deleteExpense(${nodeId})">Usuń</button>
+  var editCancelExpense = (nodeIdE, nodeTitleE, nodeAmountE) => {
+    document.querySelector(`#expensesUl li[data-id="${nodeIdE}"]`).innerHTML = `
+      ${nodeTitleE} - ${nodeAmountE}
+      <button onclick="updateExpense(${nodeIdE})">Edytuj</button>
+      <button onclick="deleteExpense(${nodeIdE})">Usuń</button>
     `;
-    expSum += Number(expenseNumberDOM.value);
+    expSum += Number(nodeAmountE);
     let result = incSum - expSum;
     expenseSumDOM.innerHTML = expSum + "zł";
     if(result > 0) {
