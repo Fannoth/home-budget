@@ -66,6 +66,30 @@ const addNewIncome = (e) => {
   }
   const genNextId = (listOfNodes) => listOfNodes.length + 1;
 
+  function deleteIncome(id) {
+    document.querySelector(`#incomesUl li[data-id="${id}"]`).remove();
+    incSum -= Number(incomeNumberDOM.value);
+    let result = incSum - expSum;
+    incomeSumDOM.innerHTML = incSum + "zł";
+    if(result > 0) {
+        resultAllDOM.innerHTML = "Możesz wydać jeszcze: " + result + "zł";
+    } else {
+        resultAllDOM.innerHTML = "Jesteś na " + result + "zł" + ", uważaj!";
+    }
+  }
+
+  function deleteExpense(id) {
+    document.querySelector(`#expensesUl li[data-id="${id}"]`).remove();
+    expSum -= Number(expenseNumberDOM.value);
+    let result = incSum - expSum;
+    expenseSumDOM.innerHTML = expSum + "zł";
+    if(result > 0) {
+        resultAllDOM.innerHTML = "Możesz wydać jeszcze: " + result + "zł";
+    } else {
+        resultAllDOM.innerHTML = "Jesteś na " + result + "zł" + ", uważaj!";
+    }
+  }
+
   const updateIncome = (id) => {
     let node = document.querySelector(`#incomesUl li[data-id="${id}"]`);
     let title = node.dataset.title;
@@ -91,7 +115,7 @@ const addNewIncome = (e) => {
     let node = document.querySelector(`#incomesUl li[data-id="${nodeId}"]`);
 
     node.innerHTML = `
-      ${newTitle.value} - ${newAmount.value}
+      ${newTitle.value} - ${newAmount.value}zł
       <button onclick="updateIncome(${nodeId})">Edytuj</button>
       <button onclick="deleteIncome(${nodeId})">Usuń</button>
     `
@@ -151,7 +175,7 @@ const addNewIncome = (e) => {
     let nodeE = document.querySelector(`#expensesUl li[data-id="${nodeIdE}"]`);
 
     nodeE.innerHTML = `
-      ${newTitleE.value} - ${newAmountE.value}
+      ${newTitleE.value} - ${newAmountE.value}zł
       <button onclick="updateExpense(${nodeIdE})">Edytuj</button>
       <button onclick="deleteExpense(${nodeIdE})">Usuń</button>
     `
@@ -183,29 +207,7 @@ const addNewIncome = (e) => {
     }
   }
 
-  function deleteIncome(id) {
-    document.querySelector(`#incomesUl li[data-id="${id}"]`).remove();
-    incSum -= Number(incomeNumberDOM.value);
-    let result = incSum - expSum;
-    incomeSumDOM.innerHTML = incSum + "zł";
-    if(result > 0) {
-        resultAllDOM.innerHTML = "Możesz wydać jeszcze: " + result + "zł";
-    } else {
-        resultAllDOM.innerHTML = "Jesteś na " + result + "zł" + ", uważaj!";
-    }
-  }
 
-  function deleteExpense(id) {
-    document.querySelector(`#expensesUl li[data-id="${id}"]`).remove();
-    expSum -= Number(expenseNumberDOM.value);
-    let result = incSum - expSum;
-    expenseSumDOM.innerHTML = expSum + "zł";
-    if(result > 0) {
-        resultAllDOM.innerHTML = "Możesz wydać jeszcze: " + result + "zł";
-    } else {
-        resultAllDOM.innerHTML = "Jesteś na " + result + "zł" + ", uważaj!";
-    }
-  }
 
     incomeFormDOM.addEventListener('submit', addNewIncome);
     expenseFormDOM.addEventListener('submit', addNewExpenses);
