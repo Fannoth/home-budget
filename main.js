@@ -130,6 +130,7 @@ const addNewIncome = (e) => {
     } else {
         resultAllDOM.innerHTML = "Jesteś na " + result + "zł" + ", uważaj!";
     }
+    incomeNumberDOM.value = newAmount.value;
   }
 
   var editCancelIncome = (nodeId, nodeTitle, nodeAmount) => {
@@ -189,6 +190,7 @@ const addNewIncome = (e) => {
     } else {
         resultAllDOM.innerHTML = "Jesteś na " + result + "zł" + ", uważaj!";
     }
+    expenseNumberDOM.value = newAmountE.value;
   }
 
   var editCancelExpense = (nodeIdE, nodeTitleE, nodeAmountE) => {
