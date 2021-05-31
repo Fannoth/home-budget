@@ -5,7 +5,7 @@
 
 ## General info
 - Simple home-budget,
-- It will not be RWD.
+- It will not be responsive.
 
 ## Tehnologies
 Project is created with:
