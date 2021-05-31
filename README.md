@@ -1,7 +1,7 @@
 ## Table of contest
 * [General info](#general-info)
 * [Technologies](#technologies)
-* [ive Server](#live-serwer)
+* [Live Server](#live-serwer)
 
 ## General info
 - Simple home-budget,
