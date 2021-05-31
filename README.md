@@ -10,7 +10,7 @@
 ## Tehnologies
 Project is created with:
 * HTML,
-* * CSS,
+* CSS,
 * Vanilla JS.
 
 ## Live Server
