@@ -1,3 +1,5 @@
+# [Live server](https://home-bugdet-fannoth.netlify.app/)
+
 ## Table of contest
 * [General info](#general-info)
 * [Technologies](#technologies)
@@ -13,5 +15,3 @@ Project is created with:
 * CSS
 * Vanilla JS
 
-## Live Server
-* [Live](https://home-bugdet-fannoth.netlify.app/)
