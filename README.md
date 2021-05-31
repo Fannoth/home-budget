@@ -1,4 +1,4 @@
-# [Live](https://home-bugdet-fannoth.netlify.app/ target="_blank")
+# [Live](https://home-bugdet-fannoth.netlify.app/)
 
 # home-budget
 - Simple home-budget,
