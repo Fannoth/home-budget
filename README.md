@@ -3,13 +3,13 @@
 ## Table of contest
 * [General info](#general-info)
 * [Technologies](#technologies)
-* [Live Server](#live-serwer)
+* [Live Server](#live-server)
 
 ## General info
 - Simple home-budget
 - It will not be responsive
 
-## Tehnologies
+## Technologies
 Project is created with:
 * HTML
 * CSS
