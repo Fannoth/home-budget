@@ -76,7 +76,7 @@ const addNewIncome = (e) => {
       <button onclick="editOkIncome(${id})">ok</button>
       <button onclick="editCancelIncome(${id}, '${title}', '${amount}')">cancel</button>
     `
-    incSum -= Number(incomeNumberDOM.value);
+    incSum -= amount;
     let result = incSum - expSum;
     incomeSumDOM.innerHTML = incSum + "zł";
     if(result > 0) {
@@ -134,7 +134,7 @@ const addNewIncome = (e) => {
       <button onclick="editOkExpense(${id})">ok</button>
       <button onclick="editCancelExpense(${id}, '${title}', '${amount}')">cancel</button>
     `
-    expSum -= Number(expenseNumberDOM.value);
+    expSum -= amount;
     let result = incSum - expSum;
     expenseSumDOM.innerHTML = expSum + "zł";
     if(result > 0) {
